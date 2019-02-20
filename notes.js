@@ -33,3 +33,32 @@ window.addEventListener('storage', function(e) {
     renderNotes(notes, filters)
   }
 })
+
+// Unix Epoch - January 1st 1970 00:00:00
+
+const now = new Date()
+const timestamp = now.getTime()
+
+const myDate = new Date(timestamp)
+console.log(myDate.getFullYear())
+
+// console.log(`Year: ${now.getFullYear()}`)
+// console.log(`Month: ${now.getMonth() + 1}`)
+// console.log(`Day of the month: ${now.getDate()}`)
+// console.log(`Hour: ${now.getHours()}`)
+// console.log(`Minute: ${now.getMinutes()}`)
+// console.log(`Seconds: ${now.getSeconds()}`)
+
+const myBirth = new Date('June 8 1992 00:00:00')
+const myBirthTimestamp = myBirth.getTime()
+
+const birth = new Date('June 21 1997 00:00:00')
+const birthTimestamp = birth.getTime()
+
+console.log(myBirth, birth)
+
+if(myBirthTimestamp > birthTimestamp) {
+  console.log(birthTimestamp.toString())
+} else {
+  console.log(myBirthTimestamp.toString())
+}
