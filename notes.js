@@ -34,31 +34,13 @@ window.addEventListener('storage', function(e) {
   }
 })
 
-// Unix Epoch - January 1st 1970 00:00:00
+// const now = moment()
+// now.subtract(1, 'week').subtract(20, 'days')
+// console.log(now.format('MMMM Do YYYY'))
+// console.log(now.fromNow())
+// const nowTimestamp = now.valueOf()
 
-const now = new Date()
-const timestamp = now.getTime()
+// console.log(moment(nowTimestamp).toString())
 
-const myDate = new Date(timestamp)
-console.log(myDate.getFullYear())
-
-// console.log(`Year: ${now.getFullYear()}`)
-// console.log(`Month: ${now.getMonth() + 1}`)
-// console.log(`Day of the month: ${now.getDate()}`)
-// console.log(`Hour: ${now.getHours()}`)
-// console.log(`Minute: ${now.getMinutes()}`)
-// console.log(`Seconds: ${now.getSeconds()}`)
-
-const myBirth = new Date('June 8 1992 00:00:00')
-const myBirthTimestamp = myBirth.getTime()
-
-const birth = new Date('June 21 1997 00:00:00')
-const birthTimestamp = birth.getTime()
-
-console.log(myBirth, birth)
-
-if(myBirthTimestamp > birthTimestamp) {
-  console.log(birthTimestamp.toString())
-} else {
-  console.log(myBirthTimestamp.toString())
-}
+const birthday = moment().set({'year': 1992, 'month': 5, 'date': 8})
+console.log(birthday.format('MMM D YYYY'))
